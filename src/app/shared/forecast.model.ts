@@ -5,5 +5,5 @@ export interface Forecast {
   currently?: any;
   minutely?: any;
   hourly?: any;
-  daily?: any
+  daily?: any;
 }
