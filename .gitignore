@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 # api keys
-config.json
+/src/app/shared/config.ts
