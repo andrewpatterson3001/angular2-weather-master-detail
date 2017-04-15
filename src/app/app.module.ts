@@ -4,26 +4,27 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Ng2RestAppRoutingModule } from './app-routing.module';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MaterialModule } from '@angular/material';
 
 import { ForecastsService } from './shared/'
 
 import { AppComponent } from './app.component';
 import { ForecastsComponent } from './forecasts/forecasts.component'
+import { ToolbarComponent } from './toolbar/toolbar.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ForecastsComponent
+    ForecastsComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdButtonModule,
-    MdCheckboxModule,
+    MaterialModule.forRoot(),
     Ng2RestAppRoutingModule
   ],
   providers: [ForecastsService],

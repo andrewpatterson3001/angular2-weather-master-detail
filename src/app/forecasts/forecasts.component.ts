@@ -8,18 +8,18 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./forecasts.component.css']
 })
 export class ForecastsComponent implements OnInit {
-  forecast: Forecast;
+  latitude: number;
 
   constructor(
     private forecastsService: ForecastsService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ){}
 
   ngOnInit() {
     this.forecastsService.loadForecast()
-      .subscribe(forecast => {
-        this.forecast = forecast;
+      .then(forecast => {
+        this.latitude = forecast.latitude;
       });
   }
 
