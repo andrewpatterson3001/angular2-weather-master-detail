@@ -9,6 +9,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ForecastsComponent implements OnInit {
   latitude: number;
+  longitude: number;
+  hourlySummary: string;
+
 
   constructor(
     private forecastsService: ForecastsService,
@@ -20,6 +23,8 @@ export class ForecastsComponent implements OnInit {
     this.forecastsService.loadForecast()
       .then(forecast => {
         this.latitude = forecast.latitude;
+        this.longitude = forecast.longitude;
+        this.hourlySummary = forecast.minutely.summary;
       });
   }
 

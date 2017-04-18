@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MdToolbarModule } from '@angular/material';
+import { MdToolbarModule, MdCardModule } from '@angular/material';
 
 @Component({
   selector: 'app-root',
