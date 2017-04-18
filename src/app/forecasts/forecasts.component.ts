@@ -11,6 +11,7 @@ export class ForecastsComponent implements OnInit {
   latitude: number;
   longitude: number;
   hourlySummary: string;
+  currentTemp: number;
 
 
   constructor(
@@ -24,7 +25,8 @@ export class ForecastsComponent implements OnInit {
       .then(forecast => {
         this.latitude = forecast.latitude;
         this.longitude = forecast.longitude;
-        this.hourlySummary = forecast.minutely.summary;
+        this.currentTemp = forecast.currently.apparentTemperature;
+        this.hourlySummary = forecast.hourly.summary;
       });
   }
 
