@@ -8,7 +8,6 @@ import { MdToolbarModule, MdCardModule } from '@angular/material';
 })
 export class AppComponent {
   title = 'Weather App';
-  thanks = 'Powered by Dark Sky'
   links = {
     forecasts: ['/forecasts']
   }
