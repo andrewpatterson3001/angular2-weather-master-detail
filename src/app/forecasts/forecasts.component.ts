@@ -29,6 +29,5 @@ export class ForecastsComponent implements OnInit {
         this.hourlySummary = forecast.hourly.summary;
       });
   }
-
 }
 

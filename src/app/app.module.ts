@@ -14,13 +14,15 @@ import { AppComponent } from './app.component';
 import { ForecastsComponent } from './forecasts/forecasts.component'
 import { ToolbarComponent } from './toolbar/toolbar.component'
 import { AppFooterComponent } from './app-footer/app-footer.component'
+import { AboutComponent } from './about/about.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ForecastsComponent,
     ToolbarComponent,
-    AppFooterComponent
+    AppFooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

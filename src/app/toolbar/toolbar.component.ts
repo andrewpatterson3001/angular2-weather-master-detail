@@ -8,4 +8,8 @@ import {Component} from '@angular/core';
 })
 export class ToolbarComponent {
   title = 'Weather App'
+  links = {
+    forecasts: ['/forecasts'],
+    about: ['/about']
+  }
 }
