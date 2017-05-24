@@ -8,7 +8,7 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
-import { ForecastsService } from './shared/'
+import { ForecastsService, AuthService } from './shared/'
 
 import { AppComponent } from './app.component';
 import { ForecastsComponent } from './forecasts/forecasts.component'
@@ -32,7 +32,7 @@ import { AboutComponent } from './about/about.component'
     MaterialModule.forRoot(),
     Ng2RestAppRoutingModule
   ],
-  providers: [ForecastsService],
+  providers: [ForecastsService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

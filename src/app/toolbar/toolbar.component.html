@@ -1,6 +1,8 @@
 <md-toolbar color="primary">
   <span>{{title}}</span>
   <span class="spacer"></span>
-  <h4><a [routerLink]="links.forecasts">Forecasts</a></h4>
-  <h4><a [routerLink]="links.about">About</a></h4>
+  <a md-button [routerLink]="links.about">About</a>
+  <a md-button [routerLink]="links.forecasts">Forecasts</a>
+  <a md-button *ngIf="!auth.isAuthenticated()" (click)="auth.login()"> Log In</a>
+  <a md-button *ngIf="auth.isAuthenticated()" (click)="auth.logout()"> Log Out</a>
 </md-toolbar>

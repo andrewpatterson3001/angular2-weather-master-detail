@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-
+import { AuthService } from '../shared';
 
 @Component({
   selector: 'app-toolbar',
@@ -11,5 +11,9 @@ export class ToolbarComponent {
   links = {
     forecasts: ['/forecasts'],
     about: ['/about']
+  }
+
+  constructor(public auth: AuthService) {
+    auth.handleAuthentication();
   }
 }
